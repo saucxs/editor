@@ -1,0 +1,53 @@
+{
+  "name": "editor",
+  "version": "0.1.0",
+  "homepage": ".",
+  "description": "a special editor for wechat md and so on",
+  "author": "saucxs<saucxs@163.com>",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "ali-oss": "^6.11.2",
+    "axios": "^0.21.0",
+    "buffer-from": "^1.1.1",
+    "codemirror": "^5.58.3",
+    "core-js": "^3.7.0",
+    "cos-js-sdk-v5": "^1.1.0",
+    "crypto-js": "^4.0.0",
+    "element-ui": "^2.14.1",
+    "jquery": "^3.5.1",
+    "juice": "^7.0.0",
+    "less": "^3.12.2",
+    "marked": "^1.2.5",
+    "prettier": "^2.2.0",
+    "prettify": "^0.1.7",
+    "qiniu-js": "^3.1.2",
+    "uuid": "^8.3.1",
+    "vue": "^2.6.12",
+    "vue-router": "^3.4.9",
+    "vuex": "^3.5.1"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^4.5.9",
+    "@vue/cli-plugin-eslint": "^4.5.9",
+    "@vue/cli-plugin-unit-jest": "^4.5.9",
+    "@vue/cli-service": "^4.5.9",
+    "@vue/eslint-config-standard": "^5.1.2",
+    "@vue/test-utils": "1.1.1",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.14.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^5.0.0",
+    "eslint-plugin-vue": "^7.1.0",
+    "less-loader": "^7.1.0",
+    "node-sass": "^5.0.0",
+    "sass-loader": "^10.1.0",
+    "vue-template-compiler": "^2.6.12"
+  }
+}
