@@ -1,107 +1,111 @@
 <template>
-    <el-container class="top is-dark">
-        <!-- 下载文本文档 -->
-        <el-tooltip
-            class="header__item"
-            :effect="effect"
-            content="下载 Markdown 文档"
-            placement="bottom-start"
-        >
-            <i
-                class="el-icon-download"
-                size="medium"
-                @click="$emit('download')"
-            ></i>
-        </el-tooltip>
-        <!-- 页面重置 -->
-        <el-tooltip
-            class="header__item"
-            :effect="effect"
-            content="重置页面"
-            placement="bottom-start"
-        >
-            <i
-                class="el-icon-refresh"
-                size="medium"
-                @click="showResetConfirm = true"
-            ></i>
-        </el-tooltip>
-        <el-form size="mini" class="ctrl" :inline="true">
-            <el-form-item>
-                <el-select
-                    v-model="selectSize"
-                    size="mini"
-                    placeholder="选择段落字号"
-                    clearable
-                    @change="sizeChanged"
-                >
-                    <el-option
-                        v-for="size in config.sizeOption"
-                        :key="size.value"
-                        :label="size.label"
-                        :value="size.value"
-                    >
-                        <span class="select-item-left">{{ size.label }}</span>
-                        <span class="select-item-right">{{ size.desc }}</span>
-                    </el-option>
-                </el-select>
-            </el-form-item>
-            <el-form-item>
-                <el-select
-                    v-model="selectColor"
-                    size="mini"
-                    placeholder="选择颜色"
-                    clearable
-                    @change="colorChanged"
-                >
-                    <el-option
-                        v-for="color in config.colorOption"
-                        :key="color.value"
-                        :label="color.label"
-                        :value="color.value"
-                    >
-                        <span class="select-item-left">{{ color.label }}</span>
-                        <span class="select-item-right">{{ color.desc }}</span>
-                    </el-option>
-                </el-select>
-            </el-form-item>
+    <div>
+        <h3 class="title-box">Editor</h3>
+        <el-container class="top is-dark">
+            <!-- 下载文本文档 -->
             <el-tooltip
-                content="微信外链自动转为文末引用"
+                class="header__item"
                 :effect="effect"
-                placement="top"
+                content="下载 Markdown 文档"
+                placement="bottom-start"
             >
-                <el-switch
-                    class="header__switch"
-                    v-model="citeStatus"
-                    active-color="#67c23a"
-                    inactive-color="#dcdfe6"
-                    @change="statusChanged"
-                >
-                </el-switch>
+                <i
+                    class="el-icon-download"
+                    size="medium"
+                    @click="$emit('download')"
+                ></i>
             </el-tooltip>
-        </el-form>
-        <el-button
-            :type="btnType"
-            plain
-            size="medium"
-            @click="copy"
-            placement="bottom-start"
-            >复制</el-button
-        >
-        <el-button
-            :type="btnType"
-            plain
-            size="medium"
-            class="about"
-            @click="$emit('show-about-dialog')"
-            >关于</el-button
-        >
-        <resetDialog
-            :showResetConfirm="showResetConfirm"
-            @confirm="confirmReset"
-            @close="cancelReset"
-        />
-    </el-container>
+            <!-- 页面重置 -->
+            <el-tooltip
+                class="header__item"
+                :effect="effect"
+                content="重置页面"
+                placement="bottom-start"
+            >
+                <i
+                    class="el-icon-refresh"
+                    size="medium"
+                    @click="showResetConfirm = true"
+                ></i>
+            </el-tooltip>
+            <el-form size="mini" class="ctrl" :inline="true">
+                <el-form-item>
+                    <el-select
+                        v-model="selectSize"
+                        size="mini"
+                        placeholder="选择段落字号"
+                        clearable
+                        @change="sizeChanged"
+                    >
+                        <el-option
+                            v-for="size in config.sizeOption"
+                            :key="size.value"
+                            :label="size.label"
+                            :value="size.value"
+                        >
+                            <span class="select-item-left">{{ size.label }}</span>
+                            <span class="select-item-right">{{ size.desc }}</span>
+                        </el-option>
+                    </el-select>
+                </el-form-item>
+                <el-form-item>
+                    <el-select
+                        v-model="selectColor"
+                        size="mini"
+                        placeholder="选择颜色"
+                        clearable
+                        @change="colorChanged"
+                    >
+                        <el-option
+                            v-for="color in config.colorOption"
+                            :key="color.value"
+                            :label="color.label"
+                            :value="color.value"
+                        >
+                            <span class="select-item-left">{{ color.label }}</span>
+                            <span class="select-item-right">{{ color.desc }}</span>
+                        </el-option>
+                    </el-select>
+                </el-form-item>
+                <el-tooltip
+                    content="微信外链自动转为文末引用"
+                    :effect="effect"
+                    placement="top"
+                >
+                    <el-switch
+                        class="header__switch"
+                        v-model="citeStatus"
+                        active-color="#67c23a"
+                        inactive-color="#dcdfe6"
+                        @change="statusChanged"
+                    >
+                    </el-switch>
+                </el-tooltip>
+            </el-form>
+            <el-button
+                :type="btnType"
+                plain
+                size="medium"
+                @click="copy"
+                placement="bottom-start"
+                >复制</el-button
+            >
+            <el-button
+                :type="btnType"
+                plain
+                size="medium"
+                class="about"
+                @click="$emit('show-about-dialog')"
+                >关于</el-button
+            >
+            <resetDialog
+                :showResetConfirm="showResetConfirm"
+                @confirm="confirmReset"
+                @close="cancelReset"
+            />
+        </el-container>
+    </div>
+    
 </template>
 
 <script>
@@ -282,6 +286,10 @@ export default {
 </script>
 
 <style lang="less" scoped>
+.title-box {
+    font-weight: bold;
+    padding: 10px 20px 0;
+}
 .editor__header {
     width: 100%;
 }

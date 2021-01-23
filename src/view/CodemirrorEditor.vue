@@ -368,6 +368,9 @@ export default {
 };
 </script>
 <style lang="less" scoped>
+.editor__header {
+  height: 96px!important;
+}
 .main-body {
   padding-top: 12px;
   overflow: hidden;
