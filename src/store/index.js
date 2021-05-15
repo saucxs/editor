@@ -3,12 +3,19 @@ import Vuex from "vuex";
 import config from "../assets/scripts/config";
 import WxRenderer from "../assets/scripts/renderers/wx-renderer";
 import marked from "marked";
+import hljs from 'highlight.js';
 import CodeMirror from "codemirror/lib/codemirror";
 import DEFAULT_CONTENT from "../assets/scripts/default-content";
 import DEFAULT_CSS_CONTENT from "../assets/scripts/themes/default-theme-css";
 import { setColor, formatDoc, formatCss } from "../assets/scripts/util";
 
 Vue.use(Vuex);
+
+hljs.configure({
+    tabReplace: '  ',
+    classPrefix: 'hljs-',
+    languages: ['CSS', 'HTML, XML', 'JavaScript', 'PHP', 'Python', 'Stylus', 'TypeScript', 'Markdown']
+  })
 
 const state = {
     wxRenderer: null,
@@ -32,7 +39,11 @@ const mutations = {
         state.cssEditor.setValue(data);
     },
     setWxRendererOptions(state, data) {
-        state.wxRenderer.setOptions(data);
+        console.log(data, 'saucxs========data');
+        state.wxRenderer.setOptions({
+            ...data,
+            highlight: (code) => hljs.highlightAuto(code).value,
+        });
     },
     setCiteStatus(state, data) {
         state.citeStatus = data;

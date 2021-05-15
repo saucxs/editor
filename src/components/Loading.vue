@@ -2,7 +2,7 @@
     <div class="loading" id="loading">
         <div class="loading-wrapper">
             <div class="loading-anim"></div>
-            <div class="loading-text">拼命记载中～</div>
+            <div class="loading-text">拼命加载中～</div>
         </div>
     </div>
 </template>

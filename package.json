@@ -4,7 +4,6 @@
   "homepage": ".",
   "description": "a special editor for wechat md and so on",
   "author": "saucxs<saucxs@163.com>",
-  "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",

@@ -86,6 +86,7 @@ class WxRenderer {
         };
 
         this.setOptions = (newOpts) => {
+            console.log(this.opts, newOpts, 'saucxs=====');
             this.opts = merge(this.opts, newOpts);
         };
 
@@ -144,7 +145,7 @@ class WxRenderer {
                 const codeTheme = "github";
                 return `
                 <section class="code-snippet__${codeTheme}">
-                    <pre class="code__pre" data-lang="${lang}">
+                    <pre class="code__pre lang-html" data-lang="${lang}">
                         ${codeLines.join("")}
                     </pre>
                 </section>

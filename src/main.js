@@ -3,6 +3,7 @@ import App from "./App.vue";
 import store from "./store";
 import ElementUI from "element-ui";
 import "element-ui/lib/theme-chalk/index.css";
+import 'highlight.js/styles/atelier-dune-dark.css';
 import "./plugins/element";
 import "codemirror/lib/codemirror.css";
 import "codemirror/theme/xq-light.css";
