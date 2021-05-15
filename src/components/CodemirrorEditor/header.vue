@@ -1,6 +1,10 @@
 <template>
     <div>
-        <h3 class="title-box">Editor</h3>
+        <div class="title-container">
+            <h2 class="title-box">Editor</h2>
+            <span class="title-description">简洁的 Markdown 转 Wechat 编辑器</span>
+        </div>
+        
         <el-container class="top is-dark">
             <!-- 下载文本文档 -->
             <el-tooltip
@@ -286,9 +290,18 @@ export default {
 </script>
 
 <style lang="less" scoped>
+.title-container {
+    display: flex;
+    align-items: center;
+     padding: 10px 20px 0;
+    .title-description {
+        font-size: 12px;
+        color: #a9a4a4;
+        margin-left: 10px;
+    }
+}
 .title-box {
     font-weight: bold;
-    padding: 10px 20px 0;
 }
 .editor__header {
     width: 100%;
