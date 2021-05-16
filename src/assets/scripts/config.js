@@ -40,9 +40,14 @@ export default {
     ],
     colorOption: [
         {
+            label: '极客蓝',
+            value: '#1890ff',
+            desc: '极客精神',
+        },
+        {
             label: "经典蓝",
             value: "rgba(15, 76, 129, 1)",
-            desc: "最新流行",
+            desc: "比较流行",
         },
         {
             label: "翡翠绿",

@@ -13,14 +13,14 @@
         <div style="text-align: center; margin-top: 10px">
             <p>扫码关注我的公众号，精选文章第一时间推送！</p>
             <img
-                src="https://raw.githubusercontent.com/saucxs/full_stack_knowledge_list/master/image/songbao.png?raw=true"
+                src="../../assets/images/songbao-big.png"
                 style="width: 80%; display: block; margin: 20px auto 10px"
             />
         </div>
         <span slot="footer" class="dialog-footer">
             <el-button
                 type="primary"
-                @click="onRedirect('https://github.com/saucxs')"
+                @click="onRedirect('https://github.com/saucxs/editor')"
                 plain
                 >GitHub</el-button
             >

@@ -26,9 +26,10 @@ export default {
             "font-weight": "bold",
             display: "table",
             margin: "4em auto 2em",
-            padding: "0 0.2em",
+            padding: "0.4em 0.8em",
             background: "rgba(0, 152, 116, 0.9)",
             color: "#fff",
+            "border-radius": "4px",
         },
 
         // 三级标题样式
