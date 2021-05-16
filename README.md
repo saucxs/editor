@@ -27,6 +27,10 @@ PS： 本项目基于 [wechat-format](https://github.com/lyricat/wechat-format) 
 ### v 0.2.0
 + 上传图片，支持github图床
 + 自定义md的css样式
+
+### v 0.1.1
++ 支持主题色：极客蓝
++ 调整下载md和重置按钮位置
 ### v 0.1.0
 + md转wechat格式。
 + 支持下载md格式文档。
