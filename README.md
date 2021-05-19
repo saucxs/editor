@@ -29,8 +29,11 @@ PS： 本项目基于 [wechat-format](https://github.com/lyricat/wechat-format) 
 + 自定义md的css样式
 
 ### v 0.1.1
-+ 支持主题色：极客蓝
++ 支持代码高亮
++ 新增主题色：极客蓝
 + 调整下载md和重置按钮位置
++ 调整了h2默认的样式
+
 ### v 0.1.0
 + md转wechat格式。
 + 支持下载md格式文档。
