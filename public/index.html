@@ -7,9 +7,44 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <link rel="icon" href="<%= BASE_URL %>favicon.ico">
   <title>Editor | 简洁的 Markdown 转 Wechat 编辑器</title>
-  <meta name="description" content="Editor是一款简洁的 Markdown 转 Wechat 编辑器。自动将md转成微信公众号图文，拥有一键发送到指定平台能力，支持独立平台独立配置，支持md样式配置等功能。">
+  <meta name="description"
+    content="Editor是一款简洁的 Markdown 转 Wechat 编辑器。自动将md转成微信公众号图文，拥有一键发送到指定平台能力，支持独立平台独立配置，支持md样式配置等功能。">
   <meta name="keywords" content="Editor,markdown,编辑器,md,md转微信公众号,微信,公众号,一键发布,独立配置,songEgale,saucxs,松宝写代码,程新松">
   <link rel="dns-prefetch" href="http://md.chengxinsong.cn">
+  <script>
+    (function (win, export_obj) {
+      win['TeaAnalyticsObject'] = export_obj;
+      if (!win[export_obj]) {
+        function _collect() {
+          _collect.q.push(arguments);
+        }
+        _collect.q = _collect.q || [];
+        win[export_obj] = _collect;
+      }
+      win[export_obj].l = +new Date();
+    })(window, 'collectEvent');
+  </script>
+  <script async src="https://sf1-scmcdn-tos.pstatp.com/goofy/log-sdk/collect/collect-autotrack-rangers.js"></script>
+  <script>
+    window.collectEvent('init', {
+      app_id: 244625,
+      enable_ab_test: true,
+      channel: 'cn',
+      autotrack: true,  //默认关闭，需要热力图及圈选功能可开启
+    });
+    window.collectEvent('getVar', 'sauxcxs', '', function (value) {
+      if (value === '1') {
+        //
+      } else if (value === '2') {
+        //
+      } else if (value === '3') {
+        //
+      } else {
+        //
+      }
+    })
+    window.collectEvent('start');
+  </script>
 </head>
 
 <body>
@@ -22,5 +57,10 @@
 </body>
 <!-- 代码高亮 -->
 <script src="https://cdn.bootcdn.net/ajax/libs/prettify/r224/prettify.min.js"></script>
+<script>
+  window.collectEvent('first_start_app', {
+    'start_app': 'test',
+  })
+</script>
 
 </html>
